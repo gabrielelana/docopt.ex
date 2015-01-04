@@ -646,6 +646,7 @@ $ prog go go
 $ prog go go go
 "user-error"
 
+
 r"""usage: prog go..."""
 $ prog go go go go go
 {"go": 5}
@@ -653,6 +654,7 @@ $ prog go go go go go
 #
 # [options] does not include options from usage-pattern
 #
+
 r"""usage: prog [options] [-a]
 
 options: -a
