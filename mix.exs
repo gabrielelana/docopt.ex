@@ -4,7 +4,7 @@ defmodule Docopt.Mixfile do
   def project do
     [app: :docopt,
      version: "0.0.1",
-     elixir: "~> 1.0.2",
+     elixir: "> 1.0.2",
      deps: deps]
   end
 
@@ -25,6 +25,6 @@ defmodule Docopt.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [{:paco, git: "https://github.com/gabrielelana/paco.git"}]
   end
 end
