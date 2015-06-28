@@ -63,13 +63,9 @@ defmodule Docopt.Test.Acceptance do
     def unpack({:output, _, _, _, ats}), do: ats
   end
 
-  @testcases "test/resources/testcases.docopt"
+  @external_resource testcases = Path.join([__DIR__, "resources", "testcases.docopt"])
 
-  test "Docopt testcase file exists" do
-    assert File.exists?(@testcases), "Docopt testcase file #{@testcases} not found"
-  end
-
-  for at <- Parser.parse(@testcases) do
+  for at <- Parser.parse(testcases) do
     @tag :acceptance
     test "Acceptance test number #{at.id} at line #{at.at_line}" do
       :timer.sleep(100)
