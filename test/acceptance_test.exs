@@ -70,6 +70,7 @@ defmodule Docopt.Test.Acceptance do
   end
 
   for at <- Parser.parse(@testcases) do
+    @tag :acceptance
     test "Acceptance test number #{at.id} at line #{at.at_line}" do
       :timer.sleep(100)
       assert String.length(unquote(at.output)) >= 0
