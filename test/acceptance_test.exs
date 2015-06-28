@@ -63,7 +63,7 @@ defmodule Docopt.Test.Acceptance do
     def unpack({:output, _, _, _, ats}), do: ats
   end
 
-  @testcases "test/testcases.docopt"
+  @testcases "test/resources/testcases.docopt"
 
   test "Docopt testcase file exists" do
     assert File.exists?(@testcases), "Docopt testcase file #{@testcases} not found"
